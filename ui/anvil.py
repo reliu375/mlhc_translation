@@ -14,7 +14,7 @@ class Translate(TranslateTemplate):
     """This method is called when the button is clicked"""
     self.translated.visible = True
     self.translated_label.visible = True
-    self.translated.text = self.report.text
+    self.translated.text = anvil.server.call('translate', self.report.text)
 
   def clear_click(self, **event_args):
     """This method is called when the button is clicked"""
